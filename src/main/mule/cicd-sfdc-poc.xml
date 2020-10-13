@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="8faa6ee3-ac50-4029-a269-a8d8a2b03d05" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cicd-sfdc-pocFlow" doc:id="1f53eb47-ce77-48ec-b27e-bf2bbee6f7c8" >
+		<http:listener doc:name="Listener" doc:id="9aba15aa-5bd6-405b-91d6-2ff3e5fc25f3" config-ref="HTTP_Listener_config" path="/real"/>
+		<set-payload value="hey" doc:name="Set Payload" doc:id="0e20ed95-e681-48f0-a001-d8bce1b7e89a" />
+		<set-payload value='#["lol"]' doc:name="Set Payload" doc:id="1e9ac6d8-3bdd-434d-83d4-0982b2dcc080" />
+		<logger level="INFO" doc:name="Logger" doc:id="40762cfa-d3b7-4450-b68c-b910e67e26dd" message="#[payload]"/>
+	</flow>
+</mule>
