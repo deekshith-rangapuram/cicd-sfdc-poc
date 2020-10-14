@@ -33,6 +33,28 @@
 				<configuration>
 				</configuration>
 			</plugin>
+			<plugin>
+  <groupId>org.mule.tools.maven</groupId>
+  <artifactId>mule-maven-plugin</artifactId>
+  <version>3.3.2</version>
+  <extensions>true</extensions>
+  <configuration>
+    <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion>${app.runtime}</muleVersion>
+      <username>pocpractice</username>
+      <password>Sagar@20163313</password>
+      <applicationName>cicd-sfdc-poc</applicationName>
+      <environment>Sandbox</environment>
+      <region>us-e2</region>
+      <workers>1</workers>
+      <workerType>MICRO</workerType>
+      <properties>
+        <key>value</key>
+      </properties>
+    </cloudHubDeployment>
+  </configuration>
+</plugin>
 		</plugins>
 	</build>
 
