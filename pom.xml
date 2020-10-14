@@ -33,7 +33,7 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
+						<muleVersion>4.3.0</muleVersion>
 						<username>pocpractice</username>
 						<password>Sagar@20163313</password>
 						<applicationName>cicd-sfdc-poc</applicationName>
