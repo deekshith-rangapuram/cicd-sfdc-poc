@@ -39,6 +39,7 @@
 						<applicationName>cicd-sfdc-poc</applicationName>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
+						<objectStoreV2>true</objectStoreV2>
 						<workerType>MICRO</workerType>
 					</cloudHubDeployment>
 				</configuration>
